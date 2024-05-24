@@ -25,7 +25,8 @@ public class CourseServiceTest {
 
     @Test
     public void testAddCourse() {
-        when(courseRepository.save("Biology")).thenReturn(new Course("Biology"));
+        when(courseRepository.save("Biology"))
+                .thenReturn(new Course("Biology"));
 
         Course course = courseService.addCourse("Biology");
 
